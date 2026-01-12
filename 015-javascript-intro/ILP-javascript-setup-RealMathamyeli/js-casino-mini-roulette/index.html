@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Roulette Pro</title>
+    <script src="miniroulette.js" defer></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; text-align: center; padding: 50px; background-color: #f0f2f5; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: inline-block; min-width: 320px; }
+        #spiel { display: none; }
+        button { cursor: pointer; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; background: #007bff; color: white; }
+        button:hover { background: #0056b3; }
+        input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; width: 100px; text-align: center; font-size: 1.1em; }
+        .fehler { color: #dc3545; font-weight: bold; }
+        #ergebnis { margin-top: 20px; font-size: 1.2em; font-weight: bold; min-height: 3em; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="start">
+            <h1>Zutrittskontrolle</h1>
+            <p>Alter eingeben & Enter drücken:</p>
+            <input type="number" id="alter" placeholder="Alter">
+            <p id="fehler" class="fehler"></p>
+        </div>
+
+        <div id="spiel">
+            <h1>🎰 Mini-Roulette</h1>
+            <p>Zahl (0-18) wählen & Enter drücken:</p>
+            <input type="number" id="zahl" min="0" max="18">
+            <div id="ergebnis"></div>
+            <hr>
+            <button id="resetBtn" style="background: #6c757d;">Zurück zum Start</button>
+        </div>
+    </div>
+
+</body>
+</html>

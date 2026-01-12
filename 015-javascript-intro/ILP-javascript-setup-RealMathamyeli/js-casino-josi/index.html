@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mini Casino</title>
+    <script src="script.js"></script>
+    <!-- script für die Funktion eingefügt -->
+  </head>
+  <body>
+    <h1>Mini Casino</h1>
+    <!-- Überschrift -->
+
+    <div id="start">
+      <!-- Ein Kontainer Element mit dem ID-Attribut "start" -->
+      <p>Bitte gib dein Alter ein:</p>
+      <!-- Text -->
+      <input type="number" id="alter" />
+      <!-- Eingabefeld für das Alter -->
+      <button onclick="pruefeAlter()">Alter prüfen</button>
+      <!-- Button zum Prüfen des Alters -->
+      <p id="fehler"></p>
+      <!-- Absatz für Fehlermeldungen, erscheint nur wenn JS sagt das User minderjährig ist -->
+    </div>
+
+    <div id="spiel" style="display: none">
+      <!-- Ein Kontainer Element mit dem ID-Attribut "spiel", standardmäßig ausgeblendet -->
+      <p>Gib eine Zahl zwischen 1 und 100 ein:</p>
+      <!-- Text -->
+      <input type="number" id="zahl" />
+      <!-- Eingabefeld für die Zahl type definiert das es ein Zahleneingabefeld ist und wird durch id definiert im JS-->
+      <button onclick="pruefeZahl()">Zahl prüfen</button>
+      <!-- Button zum Prüfen der Zahl -->
+      <button onclick="zurueck()">Zurück</button>
+      <!-- Button zum Zurückkehren zum Altersprüfungsbildschirm -->
+      <p id="ergebnis"></p>
+      <!-- Absatz für das Ergebnis der Zahlprüfung -->
+    </div>
+  </body>
+</html>

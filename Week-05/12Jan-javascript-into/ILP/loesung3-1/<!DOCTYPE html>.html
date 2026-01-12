@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labor: Script-Ladestrategien</title>
+
+    <script src="script-normal.js"></script>
+    
+    <script src="script-async.js" async></script>
+    
+    <script src="script-defer.js" defer></script>
+
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background: #f4f4f4; }
+        .info-box { background: white; padding: 15px; border-radius: 8px; border-left: 5px solid #007bff; }
+        code { background: #eee; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Experiment: Async vs. Defer</h1>
+    
+    <div class="info-box">
+        <p><strong>Status:</strong> Die Seite wurde geladen.</p>
+        <p>Öffne die <strong>DevTools (F12)</strong> und schau in die Konsole, um die Tabelle aus <code>beobachtung.js</code> zu sehen.</p>
+    </div>
+
+    <script type="module" src="module.js"></script>
+    
+</body>
+</html>

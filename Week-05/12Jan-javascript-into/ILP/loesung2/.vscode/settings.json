@@ -1,0 +1,22 @@
+{
+    // Automatisch formatieren beim Speichern
+    "editor.formatOnSave": true,
+
+    // Welches Programm soll formatieren? (Standard für HTML/JS)
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // Zeilenumbrüche, damit man nicht horizontal scrollen muss
+    "editor.wordWrap": "on",
+
+    // Live Server: Automatisch die index.html öffnen, auch wenn man im JS tippt
+    "liveServer.settings.root": "/",
+
+    // Tab-Größe auf 2 Leerzeichen setzen (Standard in der JS-Welt)
+    "editor.tabSize": 2,
+
+    // Leere Zeilen am Ende der Datei automatisch hinzufügen
+    "files.insertFinalNewline": true,
+
+    // Damit Snippets immer ganz oben stehen:
+    "editor.snippetSuggestions": "top"
+}

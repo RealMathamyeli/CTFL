@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen-Labor</title>
+    <script src="script.js" defer></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 50px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        .lang-bar { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        .lang-btn { cursor: pointer; border: 1px solid #ddd; background: white; padding: 6px 12px; border-radius: 6px; transition: 0.2s; }
+        .lang-btn:hover { background: #007bff; color: white; }
+        h1 { font-size: 1.5rem; color: #333; margin-bottom: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { background: #e7f3ff; color: #007bff; margin: 10px 0; padding: 12px; border-radius: 8px; font-weight: bold; border: 1px solid #b3d7ff; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="lang-bar">
+            <button class="lang-btn" onclick="setLanguage('de')">🇩🇪 DE</button>
+            <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 EN</button>
+            <button class="lang-btn" onclick="setLanguage('fr')">🇫🇷 FR</button>
+            <button class="lang-btn" onclick="setLanguage('es')">🇪🇸 ES</button>
+        </div>
+
+        <h1 id="main-title">Benutzer-Begrüßung</h1>
+        <ul id="guest-list">
+            </ul>
+    </div>
+
+</body>
+</html>

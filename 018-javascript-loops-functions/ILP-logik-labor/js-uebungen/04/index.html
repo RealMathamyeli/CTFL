@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb-Rechner</title>
+    <script src="script.js" defer></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 50px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; }
+        .lang-bar { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; }
+        .lang-btn { cursor: pointer; border: 1px solid #ddd; background: white; padding: 6px 12px; border-radius: 6px; }
+        .lang-btn:hover { background: #28a745; color: white; }
+        h1 { font-size: 1.4rem; color: #333; text-align: center; }
+        h3 { font-size: 1rem; color: #666; margin-top: 20px; }
+        ul { list-style: none; padding: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        li { padding: 5px 0; color: #444; display: flex; justify-content: space-between; }
+        .total-area { margin-top: 15px; text-align: right; }
+        #total-label { font-size: 0.9rem; color: #666; }
+        #total-value { font-size: 1.8rem; color: #28a745; font-weight: bold; display: block; }
+        #discount-note { color: #dc3545; font-size: 0.8rem; font-weight: bold; display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="lang-bar">
+            <button class="lang-btn" onclick="setLanguage('de')">🇩🇪 DE</button>
+            <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 EN</button>
+            <button class="lang-btn" onclick="setLanguage('fr')">🇫🇷 FR</button>
+            <button class="lang-btn" onclick="setLanguage('es')">🇪🇸 ES</button>
+        </div>
+
+        <h1 id="main-title">Warenkorb</h1>
+        
+        <h3 id="sub-title">Deine Artikel:</h3>
+        <ul id="item-list"></ul>
+
+        <div class="total-area">
+            <span id="total-label">Gesamtpreis:</span>
+            <span id="total-value">0.00 €</span>
+            <div id="discount-note">Rabatt!</div>
+        </div>
+    </div>
+
+</body>
+</html>

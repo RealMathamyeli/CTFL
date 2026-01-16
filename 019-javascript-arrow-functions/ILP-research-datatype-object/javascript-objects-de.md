@@ -28,7 +28,9 @@ Sie können entweder sein:
 
 ---
 
-Arrays
+### ILP Lösung
+
+### Arrays
 Was sind Arrays? Arrays sind geordnete Listen-Datentypen, in denen mehrere Werte (Elemente) unter einem einzigen Variablennamen gespeichert werden können.
 
 Wichtigste Merkmale: Sie sind indexbasiert (beginnend bei 0), haben eine dynamische Länge (length-Eigenschaft) und können verschiedene Datentypen gleichzeitig enthalten.
@@ -39,7 +41,7 @@ Zugriff und Veränderung: Man greift auf Elemente über ihren Index in eckigen K
 
 Iteration (forEach & map): Während forEach eine Funktion für jedes Element ausführt (meist für Seiteneffekte), transformiert map jedes Element und gibt ein komplett neues Array zurück.
 
-Objekte
+### Objekte
 Was sind Objekte? Objekte sind Sammlungen von zusammengehörigen Daten und Funktionalitäten, die als Paare aus Schlüsseln (Keys) und Werten (Values) gespeichert werden.
 
 Wichtigste Merkmale: Sie sind ungeordnet, verwenden benannte Eigenschaften anstelle von Indizes und erlauben es, komplexe Strukturen realitätsnah abzubilden.

@@ -1,0 +1,5 @@
+#!/bin/bash
+find . -mindepth 2 -name ".git" -type d -prune -exec rm -rf {} +
+git rm -r --cached .
+git add .
+git commit -m "Update"

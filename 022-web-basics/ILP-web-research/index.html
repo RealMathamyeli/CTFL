@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Analyse der Web-Protokolle - Fachartikel</title>
+    
+    <meta name="description" content="Analyse von HTTP-Headern, TLS-Handshake und der Evolution von HTTP/1.1 zu HTTP/2.">
+    
+    <meta property="og:title" content="Fachartikel: Web-Protokolle & Semantik">
+    <meta property="og:description" content="Eine Analyse über den Datenaustausch im modernen Web.">
+    <meta property="og:type" content="article">
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 850px; margin: 40px auto; padding: 0 20px; color: #222; }
+        header { border-bottom: 2px solid #333; margin-bottom: 30px; }
+        code { background: #f0f0f0; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
+        section { margin-bottom: 40px; }
+        h1 { color: #0056b3; }
+        h2 { border-left: 5px solid #0056b3; padding-left: 10px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Analyse-Phase: Protokolle unter dem Mikroskop</h1>
+        <p>Verfasst von: <strong>Daniel</strong> | Status: <em>Experten Aufgabe vollständig.</em></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. HTTP-Header in der Praxis</h2>
+            <p>
+                Bei der Analyse der Netzwerk-Anfragen wurde deutlich, dass Header essenzielle Metadaten für die Kommunikation liefern. 
+                Der <code>User-Agent</code> übermittelt Details zum Browser, während <code>Accept-Language</code> die bevorzugte Sprache des Nutzers klärt. 
+                Zusätzlich steuert <code>Cache-Control</code> die Effizienz durch Speicherregeln, und <code>Content-Type</code> definiert das Datenformat wie HTML oder JSON.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Der TLS-Handshake (HTTPS-Sicherheit)</h2>
+            <p>
+                Der TLS-Handshake sichert die Verbindung, indem Client und Server zunächst Verschlüsselungs-Standards im "Hello"-Austausch aushandeln. 
+                Anschließend authentifiziert sich der Server durch ein digitales Zertifikat, woraufhin beide Parteien einen kryptografischen Schlüssel für die Sitzung generieren. 
+                Erst nach diesem Prozess wird das erste verschlüsselte Datenpaket übertragen, was Integrität und Vertraulichkeit garantiert.
+            </p>
+            
+        </section>
+
+        <section>
+            <h2>3. Die Evolution: Von HTTP/1.1 zu HTTP/2</h2>
+            <p>
+                HTTP/1.1 leidet unter dem "Head-of-Line Blocking", bei dem eine langsame Anfrage alle nachfolgenden Datenpakete in der Warteschlange blockiert. 
+                HTTP/2 löst dieses fundamentale Performance-Problem durch <strong>Multiplexing</strong>, wodurch mehrere Anfragen gleichzeitig über eine einzige TCP-Verbindung fließen können. 
+                Diese Technik reduziert Ladezeiten massiv, da der Browser nicht mehr auf die Fertigstellung einzelner Dateien warten muss.
+            </p>
+            
+        </section>
+
+        <hr> <section>
+            <h2>Semantische Synthese</h2>
+            <p>
+                In diesem Dokument wurden gezielt <code>&lt;strong&gt;</code> für inhaltliche Relevanz und <code>&lt;em&gt;</code> für die sprachliche Betonung eingesetzt. 
+                Im Gegensatz zu rein visuellen Tags wie <b>b</b> oder <i>i</i> ermöglichen diese eine barrierefreie Interpretation durch Screenreader. 
+                Auf Layout-Hacks wie doppelte Zeilenumbrüche wurde verzichtet, da Abstände sauber über CSS-Eigenschaften definiert werden sollten.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy; 2026 - Erstellt im Rahmen des AWS-Kurs von DCI. Validiert nach W3C-Standard.</small></p>
+    </footer>
+
+</body>
+</html>

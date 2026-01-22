@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt - Projekt-Showcase</title>
+</head>
+<body>
+
+    <header>
+        <p><a href="../index.html">← Zurück zur Startseite</a></p>
+        <h1>Projekt-Anfrage</h1>
+    </header>
+
+    <main>
+        <form action="/submit-form" method="POST">
+            
+            <p>
+                <label for="name">Vollständiger Name:</label><br>
+                <input type="text" id="name" name="kunden_name" required>
+            </p>
+
+            <p>
+                <label for="email">E-Mail-Adresse:</label><br>
+                <input type="email" id="email" name="kunden_email" required>
+            </p>
+
+            <fieldset>
+                <legend>Art der Anfrage:</legend>
+                <input type="radio" id="angebot" name="anfrage_typ" value="angebot">
+                <label for="angebot">Angebot anfordern</label><br>
+                
+                <input type="radio" id="frage" name="anfrage_typ" value="frage">
+                <label for="frage">Allgemeine Frage</label>
+            </fieldset>
+
+            <p>
+                <label for="nachricht">Deine Nachricht:</label><br>
+                <textarea id="nachricht" name="botschaft" rows="5" cols="40" placeholder="Beschreibe dein Projekt..."></textarea>
+            </p>
+
+            <p>
+                <input type="checkbox" id="datenschutz" name="akzeptanz" required>
+                <label for="datenschutz">Ich akzeptiere die Datenschutzbestimmungen</label>
+            </p>
+
+            <button type="submit">Anfrage abschicken</button>
+
+        </form>
+    </main>
+
+</body>
+</html>

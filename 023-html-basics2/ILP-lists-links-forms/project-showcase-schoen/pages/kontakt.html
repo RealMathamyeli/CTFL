@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Projekt-Showcase</title>
+    <style>
+        /* 1. Grund-Design (passend zum Showcase) */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 2. Zurück-Link */
+        .nav-back a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .nav-back a:hover {
+            transform: translateX(-5px);
+        }
+
+        /* 3. Überschriften & Formular-Struktur */
+        h1 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #222;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        p { margin-bottom: 20px; }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        /* 4. Eingabefelder */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            box-sizing: border-box; /* Wichtig für korrekte Breite */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 0 4px rgba(0,123,255,0.1);
+        }
+
+        /* 5. Fieldset & Radio-Buttons */
+        fieldset {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #f9f9f9;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #007BFF;
+        }
+
+        .radio-group label {
+            display: inline; /* Radio-Labels nicht als Block */
+            font-weight: normal;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        /* 6. Checkbox-Sektion */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            margin-top: 6px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            font-size: 0.95em;
+            cursor: pointer;
+        }
+
+        /* 7. Button */
+        button[type="submit"] {
+            background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.3s, transform 0.1s;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+
+        button[type="submit"]:hover {
+            opacity: 0.9;
+        }
+
+        button[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="nav-back">
+            <p><a href="../index.html">← Zurück zur Startseite</a></p>
+            <h1>Projekt-Anfrage</h1>
+        </header>
+
+        <main>
+            <form action="/submit-form" method="POST">
+                
+                <p>
+                    <label for="name">Vollständiger Name:</label>
+                    <input type="text" id="name" name="kunden_name" placeholder="z.B. Max Mustermann" required>
+                </p>
+
+                <p>
+                    <label for="email">E-Mail-Adresse:</label>
+                    <input type="email" id="email" name="kunden_email" placeholder="beispiel@mail.de" required>
+                </p>
+
+                <fieldset>
+                    <legend>Art der Anfrage</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="angebot" name="anfrage_typ" value="angebot">
+                        <label for="angebot">Angebot anfordern</label>
+                    </div>
+                    <div class="radio-group" style="margin-top: 10px;">
+                        <input type="radio" id="frage" name="anfrage_typ" value="frage">
+                        <label for="frage">Allgemeine Frage</label>
+                    </div>
+                </fieldset>
+
+                <p>
+                    <label for="nachricht">Deine Nachricht:</label>
+                    <textarea id="nachricht" name="botschaft" rows="5" placeholder="Erzähl mir von deinem Projekt..."></textarea>
+                </p>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="datenschutz" name="akzeptanz" required>
+                    <label for="datenschutz">Ich akzeptiere die Datenschutzbestimmungen und stimme der Verarbeitung meiner Daten zu.</label>
+                </div>
+
+                <p style="margin-top: 30px;">
+                    <button type="submit">Anfrage abschicken</button>
+                </p>
+
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>

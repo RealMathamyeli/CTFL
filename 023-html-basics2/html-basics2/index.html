@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>HTML Basics II</h1>
+
+    <!-- Listen -->
+    <!-- Nicht gut -->
+    <!-- <p> - Item 1</p>
+    <p> - Item 2</p>
+    <p> - Item 3</p>
+    <p> - Item 4</p> -->
+
+    <!-- Gut -->
+    <!-- Unnummerierter Listentyp -->
+    <h2>Meine Einkaufsliste (Unnummerierter)</h2>
+    <ul>
+        <li>Kaffee</li>
+        <li>Milch</li>
+        <li>Eier</li>
+        <li>Brot</li>
+    </ul>
+
+    <!-- Nummerierte Listentyp -->
+    <h2>Rezept: Pfannkuchen (Nummerierte) </h2>
+    <ol>
+        <li>Mehl und Eier in eine Schüssel geben.</li>
+        <li>Milch hinzufügen und rühren.</li>
+        <li>In der Pfanne ausbacken.</li>
+    </ol>
+
+    <!-- Hyperlinks (<a>) -->
+    <h2>Hyperlinks</h2>
+    <a href=""> ILP Link</a>
+    <!-- Externer Link -->
+    <p>Die beste Suchmaschine ist <a href="https://www.google.de">Google</a>.</p>
+
+    <!-- Interner Link (Relativer Link) -->
+    <p>Klick <a href="about.html"> bitte hier </a> um mehr über mich zu erfahren</p>
+
+    <!-- Mit Target-Attribut -->
+    <p>
+        Besuche
+        <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+        (öffnet in
+        neuem Tab).
+    </p>
+
+    <!-- Wenn du `target="_blank"` benutzt, solltest du aus Sicherheitsgründen **immer** auch `rel="noopener noreferrer"` hinzufügen. -->
+
+    <!-- <a href="https://www.externe-seite.de" target="_blank" rel="noopener noreferrer">Externer
+        Link</a> -->
+
+
+    <!-- Bilder einbinden -->
+    <h2>Bilder in HTML</h2>
+    <img src="nicht.jpg" alt="Hier ist ein Beispielsbild" title="Bild optional Title">
+
+    <!-- Bilder einbinden -->
+    <h2>Bilder mit Relative Pfade</h2>
+    <!-- <img src="/public/github.png" alt="Screenshot von GitHub landing Page"> -->
+
+    <!-- Absolute Pfade -->
+    <h2>Bilder mit absolute Pfade</h2>
+
+    <!-- <img src="https://cdn.pixabay.com/photo/2019/11/07/08/40/puppy-4608266_1280.jpg"
+        alt="Picture of a Running Dog from Pixabay"> -->
+
+    <!-- HTML Formular -->
+
+
+    <h2>HTML Formular</h2>
+
+    <form action="/script.js" method="POST">
+        <label for="user-name"> Benutzername:</label>
+
+        <input type="text" id="user-name" name="user-name" required>
+        <br>
+
+        <label for="user-email">Benutzer Email:</label>
+
+        <input type="email" id="user-email" name="user-email" required>
+
+        <br>
+
+        <button>Absenden</button>
+
+
+
+    </form>
+
+
+</body>
+
+</html>

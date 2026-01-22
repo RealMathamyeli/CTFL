@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontaktformular</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 20px auto; line-height: 1.6; }
+        div { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        
+        /* Styling für den Sende-Button */
+        .btn-submit { background-color: #007BFF; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        .btn-submit:hover { background-color: #0056b3; }
+
+        /* Styling für den Zurück-Button */
+        .btn-back { 
+            display: inline-block; 
+            text-decoration: none; 
+            background-color: #6c757d; 
+            color: white; 
+            padding: 8px 12px; 
+            border-radius: 4px; 
+            margin-bottom: 20px; 
+        }
+        .btn-back:hover { background-color: #5a6268; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="btn-back">← Zurück zur Hauptseite</a>
+
+    <h2>Schreib mir eine Nachricht</h2>
+
+    <form action="/submit-form" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="benutzername" placeholder="Dein Vor- und Nachname" required>
+        </div>
+
+        <div>
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" name="email_adresse" placeholder="beispiel@mail.de" required>
+        </div>
+
+        <div>
+            <label for="nachricht">Nachricht:</label>
+            <textarea id="nachricht" name="botschaft" rows="5" placeholder="Was möchtest du mir mitteilen?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Abschicken</button>
+    </form>
+
+</body>
+</html>

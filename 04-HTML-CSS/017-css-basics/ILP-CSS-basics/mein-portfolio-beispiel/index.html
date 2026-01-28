@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mein Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <div class="navigation__brand">
+          <h2 class="navigation__logo">Max Mustermann</h2>
+        </div>
+
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#hero" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#projects" class="navigation__link">Projekte</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="hero" class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">Willkommen auf meinem Portfolio</h1>
+          <p class="hero__description">
+            Ich bin Webentwickler und erstelle moderne, benutzerfreundliche
+            Webseiten.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2 class="projects__title">Meine Projekte</h2>
+
+        <div class="projects__container">
+          <article class="project-card">
+            <h3 class="project-card__title">Portfolio Webseite</h3>
+            <p class="project-card__description">
+              Eine persönliche Portfolio-Webseite mit modernem Design.
+            </p>
+            <p class="project-card__tech">
+              <strong>Technologien:</strong> HTML, CSS, JavaScript
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-card__title">Blog Plattform</h3>
+            <p class="project-card__description">
+              Eine einfache Blog-Plattform zum Teilen von Artikeln.
+            </p>
+            <p class="project-card__tech">
+              <strong>Technologien:</strong> HTML, CSS, JavaScript
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-card__title">Aufgaben-App</h3>
+            <p class="project-card__description">
+              Einess="project-card__tech">
+              <strong>Technologien:</strong> HTML, CSS, JavaScript
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Kontaktiere mich</h2>
+
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form__group">
+            <label for="name" class="contact-form__label"> Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact-form__input"
+              required />
+          </div>
+
+          <div class="contact-form__group">
+            <label for="email" class="contact-form__label"> E-Mail: </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact-form__input"
+              required />
+          </div>
+
+          <div class="contact-form__group">
+            <label for="message" class="contact-form__label">
+              Nachricht:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact-form__textarea"
+              rows="5"
+              required></textarea>
+          </div>
+
+          <button type="submit" class="contact-form__button">Senden</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        &copy; <span id="current-year"></span> Max Mustermann. Alle Rechte
+        vorbehalten.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html> App zur Verwaltung von täglichen Aufgaben.
+            </p>
+            <p class="project-card__tech">
+              <strong>Technologien:</strong> HTML, CSS, JavaScript
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Kontaktiere mich</h2>
+
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form__group">
+            <label for="name" class="contact-form__label"> Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact-form__input"
+              required />
+          </div>
+
+          <div class="contact-form__group">
+            <label for="email" class="contact-form__label"> E-Mail: </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact-form__input"
+              required />
+          </div>
+
+          <div class="contact-form__group">
+            <label for="message" class="contact-form__label">
+              Nachricht:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact-form__textarea"
+              rows="5"
+              required></textarea>
+          </div>
+
+          <button type="submit" class="contact-form__button">Senden</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        &copy; <span id="current-year"></span> Max Mustermann. Alle Rechte
+        vorbehalten.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

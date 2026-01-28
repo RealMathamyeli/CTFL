@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mein Portfolio - Pink Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <div class="navigation__brand">
+          <h2 class="navigation__logo">Max Mustermann</h2>
+        </div>
+
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#hero" class="navigation__link">Home</a></li>
+          <li class="navigation__item"><a href="#projects" class="navigation__link">Projekte</a></li>
+          <li class="navigation__item"><a href="#contact" class="navigation__link">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="hero" class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">Willkommen auf meinem Portfolio</h1>
+          <p class="hero__description">
+            Kreative Webentwicklung mit einem Auge für Ästhetik. 
+            Schau auch auf meinem <a href="https://github.com/RealMathamyeli" target="_blank" rel="noopener noreferrer">GitHub</a> vorbei.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2 class="projects__title">Meine Projekte</h2>
+
+        <div class="projects__container">
+          <article id="info-block" class="project-card">
+            <span class="info-icon">✨</span>
+            <h3 class="project-card__title">Portfolio Webseite</h3>
+            <p class="project-card__description">Ein persönliches Portfolio in sanften Rosatönen.</p>
+            <p class="project-card__tech"><strong>Technologien:</strong> HTML, CSS, JavaScript</p>
+          </article>
+
+          <article class="project-card">
+            <span class="info-icon">🌸</span>
+            <h3 class="project-card__title">Blog Plattform</h3>
+            <p class="project-card__description">Ein modernes Interface zum Teilen von Geschichten.</p>
+            <p class="project-card__tech"><strong>Technologien:</strong> React, CSS Modules</p>
+          </article>
+
+          <article class="project-card">
+            <span class="info-icon">💖</span>
+            <h3 class="project-card__title">Daily-Planner</h3>
+            <p class="project-card__description">Strukturiere deinen Tag mit Liebe zum Detail.</p>
+            <p class="project-card__tech"><strong>Technologien:</strong> HTML, Flexbox</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Sag Hallo!</h2>
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form__group">
+            <label for="name" class="contact-form__label">Name:</label>
+            <input type="text" id="name" name="name" class="contact-form__input" required />
+          </div>
+          <div class="contact-form__group">
+            <label for="email" class="contact-form__label">E-Mail:</label>
+            <input type="email" id="email" name="email" class="contact-form__input" required />
+          </div>
+          <div class="contact-form__group">
+            <label for="message" class="contact-form__label">Nachricht:</label>
+            <textarea id="message" name="message" class="contact-form__textarea" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="contact-form__button">Nachricht senden</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">&copy; <span id="current-year"></span> Max Mustermann. Mit Stil entwickelt.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+/* ===================================
+   GLOBAL STYLES
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Aufgabe 2: Box-Modell korrekt gesetzt */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: #4a4a4a;
+  background-color: #fff5f8; /* Sehr helles Rosa */
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+.header {
+  background-color: #d81b60; /* Kräftiges Pink (Hex) */
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__logo {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.navigation__list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navigation__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation__link:hover {
+  color: #fce4ec;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+.hero {
+  background-color: #f06292; /* Helles Beeren-Rosa */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Aufgabe 1: Webfont & RGB */
+.hero__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255); /* RGB */
+}
+
+/* ===================================
+   PROJECTS (Flexbox Galerie)
+   =================================== */
+.projects {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.projects__container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Aufgabe 2: Flex-Wrap für Responsivität */
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #f8bbd0; /* Aufgabe 2: Border */
+  border-radius: 12px;
+  padding: 30px;             /* Aufgabe 2: Padding */
+  width: 300px;
+  transition: all 0.3s ease; /* Aufgabe 3: Feinschliff Animation */
+}
+
+/* Aufgabe 1: ID-Selektor */
+#info-block {
+  border: 2px solid #d81b60;
+  box-shadow: 0 4px 15px rgba(216, 27, 96, 0.1); /* Alpha-Kanal */
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.project-card__title {
+  color: rgb(173, 20, 87); /* Dunkles Rosa (RGB) */
+  margin-bottom: 15px;
+}
+
+.project-card__description {
+  font-size: 14px;
+  color: hsl(340, 20%, 40%); /* Aufgabe 1: HSL */
+  margin-bottom: 10px;
+}
+
+/* Aufgabe 1: Attribut-Selektor */
+a[target="_blank"] {
+  color: #ad1457;
+  text-decoration: underline wavy; /* Verspieltes Detail */
+}
+
+/* ===================================
+   CONTACT SECTION
+   =================================== */
+.contact {
+  padding: 60px 20px;
+  background-color: #fce4ec;
+}
+
+.contact-form {
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.contact-form__input, .contact-form__textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #f48fb1;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-form__button {
+  width: 100%;
+  padding: 15px;
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form__button:hover {
+  background-color: #ad1457;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+.footer {
+  background-color: #880e4f;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Media Query für Bildschirme kleiner als 768px (Handys/Tablets) */
+@media (max-width: 768px) {
+  
+  /* Die Navigation untereinander stapeln */
+  .navigation__list {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Die Überschrift im Hero-Bereich kleiner machen */
+  .hero__title {
+    font-size: 28px;
+  }
+
+  /* Die Karten auf volle Breite bringen (minus Rand) */
+  .project-card {
+    width: 100%;
+    max-width: 400px; /* Damit sie auf Tablets nicht zu riesig werden */
+  }
+}

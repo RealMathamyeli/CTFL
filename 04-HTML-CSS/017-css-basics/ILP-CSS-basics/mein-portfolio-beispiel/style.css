@@ -1,0 +1,262 @@
+/* ===================================
+   GLOBAL STYLES / GLOBALE STILE
+   =================================== */
+
+/* Reset default browser styles / Browser-Standardstile zurücksetzen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling / Body-Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f4f4f4;
+}
+
+/* ===================================
+   HEADER & NAVIGATION / KOPFZEILE & NAVIGATION
+   =================================== */
+
+/* Header container / Header-Container */
+.header {
+  background-color: #2c3e50;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+/* Navigation container / Navigations-Container */
+.navigation {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand/Logo area / Marken-/Logo-Bereich */
+.navigation__brand {
+  color: white;
+}
+
+.navigation__logo {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* Navigation list / Navigationsliste */
+.navigation__list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navigation__item {
+  display: inline;
+}
+
+/* Navigation links / Navigationslinks */
+.navigation__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* ===================================
+   HERO SECTION / HERO-BEREICH
+   =================================== */
+
+/* Hero container / Hero-Container */
+.hero {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Hero content wrapper / Hero-Inhalts-Wrapper */
+.hero__content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Hero title / Hero-Titel */
+.hero__title {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* Hero description / Hero-Beschreibung */
+.hero__description {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Hero date display / Hero-Datumsanzeige */
+.hero__date {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.hero__date-value {
+  font-weight: bold;
+}
+
+/* ===================================
+   PROJECTS SECTION / PROJEKTE-BEREICH
+   =================================== */
+
+/* Projects container / Projekte-Container */
+.projects {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+/* Projects title / Projekte-Titel */
+.projects__title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Projects cards container / Projekte-Karten-Container */
+.projects__container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual project card / Einzelne Projektkarte */
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 30px;
+  width: 300px;
+}
+
+/* Project card title / Projektkarten-Titel */
+.project-card__title {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Project card description / Projektkarten-Beschreibung */
+.project-card__description {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Project card technologies / Projektkarten-Technologien */
+.project-card__tech {
+  font-size: 14px;
+  color: #3498db;
+  margin-top: 15px;
+}
+
+/* ===================================
+   CONTACT SECTION / KONTAKT-BEREICH
+   =================================== */
+
+/* Contact container / Kontakt-Container */
+.contact {
+  padding: 60px 20px;
+  background-color: #ecf0f1;
+}
+
+/* Contact title / Kontakt-Titel */
+.contact__title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Contact form / Kontaktformular */
+.contact-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+}
+
+/* Form group / Formulargruppe */
+.contact-form__group {
+  margin-bottom: 20px;
+}
+
+/* Form labels / Formularbeschriftungen */
+.contact-form__label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Form inputs / Formulareingaben */
+.contact-form__input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* Form textarea / Formular-Textbereich */
+.contact-form__textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  resize: vertical;
+}
+
+/* Form submit button / Formular-Senden-Button */
+.contact-form__button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ===================================
+   FOOTER / FUßZEILE
+   =================================== */
+
+/* Footer container / Footer-Container */
+.footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Footer text / Footer-Text */
+.footer__text {
+  font-size: 14px;
+}

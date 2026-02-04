@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine?</title>
+    <style>
+        :root {
+            --primary-color: #ff4d6d;
+            --bg-color: #ffc2d1;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden; /* Verhindert Scrollbars beim Button-Springen */
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            z-index: 10;
+        }
+
+        h1 {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            height: 50px;
+            position: relative;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #yesBtn {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+        }
+
+        #noBtn {
+            background-color: #e0e0e0;
+            color: #666;
+            position: relative; /* Wichtig für die Verschiebung */
+            transition: all 0.1s ease;
+            z-index: 100;
+        }
+
+        .success-content {
+            display: none;
+        }
+
+        .success-content img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 15px 0;
+        }
+
+        .hearts {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="mainCard">
+        <div id="questionScreen">
+            <h1>Noorie, <br>will you be my Valentine? <span class="hearts">❤️</span></h1>
+            <div class="btn-container">
+                <button id="yesBtn">YES</button>
+                <button id="noBtn">NO</button>
+            </div>
+        </div>
+
+        <div id="successScreen" class="success-content">
+            <h1>YAY!!! <span class="hearts">✨</span></h1>
+            <p>Best decision ever! 🥰</p>
+            <img src="celebration.gif" alt="Success Celebration" id="successGif">
+            <p>I love you <span class="hearts">❤️</span></p>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const questionScreen = document.getElementById('questionScreen');
+        const successScreen = document.getElementById('successScreen');
+
+        // FUNKTION ZUM AUSWEICHEN
+        function moveButton() {
+            // Wir berechnen den Bereich so, dass der Button nicht halb aus dem Screen ragt
+            const padding = 20;
+            const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+            const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        }
+
+        // DESKTOP: Weicht bei Mausbewegung aus
+        noBtn.addEventListener('mouseover', moveButton);
+
+        // MOBILE: Weicht bei Berührung aus (bevor der Klick registriert wird)
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Verhindert, dass der Button doch geklickt wird
+            moveButton();
+        });
+
+        // ERFOLGS-LOGIK
+        yesBtn.addEventListener('click', () => {
+            questionScreen.style.display = 'none';
+            successScreen.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

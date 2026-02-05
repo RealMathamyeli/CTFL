@@ -1,0 +1,3 @@
+Das ist meine erste Notiz.
+Python macht Spaß!
+Hier ist eine nachträgliche Notiz.
